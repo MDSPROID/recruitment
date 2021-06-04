@@ -1,4 +1,4 @@
-<h1 align="center">Digital Entropy Recruitment Session</h1>
+<h1 align="center">Recruitment Session</h1>
 
 ### Procedure
 
@@ -23,11 +23,11 @@
 4. Implement Feature, Unit, or Browser Tests.
 
 ### FAQ
-> Q : I'm not familiar with Jetstream / Inertia / Vue 3 / Tailwind CSS  <br>
-> A : Feel free to change to your familiar stack, even you free to not fork this repo and create from fresh laravel as long as MVP achieved.
--
-> Q : Is this repo only work on PHP 8 ? <br>
-> A : yes it is. That's why we create `./nge` and `docker-compose.yaml` script. 
+> Q : I'm not familiar with Jetstream / Inertia / Vue 3 / Tailwind CSS.  <br>
+> A : You're free to change your fork to your familiar stack, even you're free to not fork this repo and create from fresh laravel as long as MVP achieved.
+
+> Q : Is this repo only work on PHP 8 ?. <br>
+> A : yes it is. That's why we create `./nge` and `docker-compose.yaml` script. Take a look at our [template repository](https://github.com/digital-entropy/nge.noob).
 
 
 ![](https://media.giphy.com/media/ieUnS3iEokPahZAZj6/giphy.gif)

@@ -22,22 +22,27 @@ class DefaultRoute extends BaseRoute
         $this->registerRateLimiter();
         $this->registerBindingRoute();
 
-        $this->router->get('/', [
-            'as' => $this->name('default'),
-            'uses' => fn () => Inertia::render('Welcome', [
-                'canLogin' => Route::has('login'),
-                'canRegister' => Route::has('register'),
-                'laravelVersion' => Application::VERSION,
-                'phpVersion' => PHP_VERSION,
-            ])
-        ]);
+        // $this->router->get('/', [
+        //     'as' => $this->name('default'),
+        //     'uses' => fn () => Inertia::render('Welcome', [
+        //         'canLogin' => Route::has('login'),
+        //         'canRegister' => Route::has('register'),
+        //         'laravelVersion' => Application::VERSION,
+        //         'phpVersion' => PHP_VERSION,
+        //     ])
+        // ]);
+
+        $this->router->get('{any}', function () {
+            return view('app');
+        })->where('any', '.*');
+        
     }
 
     private function registerRateLimiter(): void
     {
-        RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
-        });
+        // RateLimiter::for('api', function (Request $request) {
+        //     return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
+        // });
     }
 
     private function registerBindingRoute(): void

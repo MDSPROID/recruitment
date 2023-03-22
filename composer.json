@@ -16,6 +16,7 @@
         "laravel/octane": "^1.0",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.0",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
